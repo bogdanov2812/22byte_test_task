@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Test22byte/app/src/main/res/drawable/item_news_shape.xml" value="0.172" />
         <entry key="..\:/Test22byte/app/src/main/res/font/roboto.xml" value="0.284375" />
+        <entry key="..\:/Test22byte/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Test22byte/app/src/main/res/layout/fragment_news.xml" value="0.25416666666666665" />
         <entry key="..\:/Test22byte/app/src/main/res/layout/item_news.xml" value="0.264" />
+        <entry key="..\:/Test22byte/app/src/main/res/layout/news_detail_fragment.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>
