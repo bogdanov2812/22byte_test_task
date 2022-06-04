@@ -10,22 +10,14 @@ import androidx.paging.map
 import com.bogdanov.test22byte.domain.model.Article
 import com.bogdanov.test22byte.domain.usecase.GetArticlesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
-class NewsViewModel @Inject constructor(private val useCase: GetArticlesUseCase): ViewModel() {
+class NewsViewModel @Inject constructor(useCase: GetArticlesUseCase): ViewModel() {
 
-    init {
-        getArticles()
-    }
+    val articlesFlow: Flow<PagingData<Article>> = useCase.invoke().cachedIn(viewModelScope)
 
-    fun getArticles(): Flow<PagingData<Article>> {
-        return useCase.invoke().cachedIn(viewModelScope)
-    }
 }

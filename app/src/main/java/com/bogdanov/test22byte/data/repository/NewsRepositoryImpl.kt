@@ -20,7 +20,7 @@ class NewsRepositoryImpl(private val api: NCApi): NewsRepository {
 
     companion object {
         const val DEFAULT_PAGE = 1
-        const val DEFAULT_PAGE_SIZE = 5
+        const val DEFAULT_PAGE_SIZE = 3
 
     }
 }

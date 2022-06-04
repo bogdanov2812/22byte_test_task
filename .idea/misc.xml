@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Test22byte/app/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.12" />
+        <entry key="..\:/Test22byte/app/src/main/res/drawable/ic_baseline_downloading_24.xml" value="0.1935" />
+        <entry key="..\:/Test22byte/app/src/main/res/drawable/item_divider.xml" value="0.1" />
         <entry key="..\:/Test22byte/app/src/main/res/drawable/item_news_shape.xml" value="0.172" />
         <entry key="..\:/Test22byte/app/src/main/res/font/roboto.xml" value="0.284375" />
         <entry key="..\:/Test22byte/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Test22byte/app/src/main/res/layout/fragment_news.xml" value="0.25416666666666665" />
-        <entry key="..\:/Test22byte/app/src/main/res/layout/item_news.xml" value="0.264" />
+        <entry key="..\:/Test22byte/app/src/main/res/layout/item_news.xml" value="0.176" />
         <entry key="..\:/Test22byte/app/src/main/res/layout/news_detail_fragment.xml" value="0.24010416666666667" />
+        <entry key="..\:/Test22byte/app/src/main/res/layout/paging_footer_layout.xml" value="0.20863616930312098" />
       </map>
     </option>
   </component>

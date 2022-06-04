@@ -11,12 +11,13 @@ data class ArticlesDto(
     val id: String,
     val title: String,
     @Json(name = "excerpt")
-    val subtitle: String,
+    val subtitle: String?,
     @Json(name = "published_date")
     val date: String,
+    val link: String,
     val author: String?,
     @Json(name = "media")
-    val photo: String
+    val photo: String?
     ){
-    fun toDomainModel() = Article(id,title,subtitle,date,author?:"", photo)
+    fun toDomainModel() = Article(id,title,subtitle?:"",date,author?:"", photo, link)
 }

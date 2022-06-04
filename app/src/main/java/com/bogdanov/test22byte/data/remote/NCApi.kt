@@ -8,9 +8,9 @@ import retrofit2.http.Query
 interface NCApi {
     @GET("/v2/latest_headlines")
     suspend fun getMostPopularNews(
-        @Query("page") page: Int = 1,
-        @Query("page_size") pageSize: Int = 5,
-        @Query("countries") country: String = "US"
+        @Query("page") page: Int,
+        @Query("page_size") pageSize: Int,
+        @Query("countries") country: String = "RU"
     ): Response<ArticlesResponseDto>
 
 }

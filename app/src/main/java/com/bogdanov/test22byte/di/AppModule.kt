@@ -22,7 +22,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideAddTokenHeaderInterceptor() = AddTokenHeaderInterceptor()
+    fun provideAddTokenHeaderInterceptor(): AddTokenHeaderInterceptor = AddTokenHeaderInterceptor()
 
 
     @Provides

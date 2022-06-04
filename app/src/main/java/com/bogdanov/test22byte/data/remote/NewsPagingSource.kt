@@ -6,6 +6,7 @@ import androidx.paging.PagingState
 import com.bogdanov.test22byte.domain.model.Article
 import retrofit2.HttpException
 import com.bogdanov.test22byte.data.repository.NewsRepositoryImpl.Companion.DEFAULT_PAGE
+import com.bogdanov.test22byte.data.repository.NewsRepositoryImpl.Companion.DEFAULT_PAGE_SIZE
 import java.io.IOException
 
 class NewsPagingSource(
@@ -19,18 +20,19 @@ class NewsPagingSource(
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Article> {
         val page = params.key ?: DEFAULT_PAGE
-        val pageSize: Int = params.loadSize
 
-        Log.d("Paging", "page = $page, pageSize = $pageSize")
+
+
         return try{
-            val response = api.getMostPopularNews(page, pageSize)
+            Log.d("load", "page = $page and params = ${params.loadSize}")
+            val response = api.getMostPopularNews(page, params.loadSize)
 
             if (response.isSuccessful){
                 val articlesList = response.body()?.articles?.map {
                     it.toDomainModel()
                 } ?: emptyList()
 
-                val nextPageNumber = if (articlesList.isEmpty()) null else page + 1
+                val nextPageNumber = if (articlesList.size == params.loadSize) page + (params.loadSize / DEFAULT_PAGE_SIZE) else null
                 val prevPageNumber = if (page > 1) page - 1 else null
                 LoadResult.Page(articlesList, prevPageNumber, nextPageNumber)
             } else {

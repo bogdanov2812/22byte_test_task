@@ -6,5 +6,6 @@ data class Article(
     val subtitle: String,
     val date: String,
     val publisher: String,
-    val photo: String
+    val photo: String?,
+    val link: String
 )
